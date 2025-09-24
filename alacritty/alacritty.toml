@@ -1,0 +1,67 @@
+# alacritty.toml
+# commented lines are the defaults
+# man 5 alacritty (>0.13) for full config manual
+[window]
+#dimensions            = { columns = 0, lines = 0 }
+#position              = { x = 0, y = 0 }
+padding               = { x = 2, y = 2 }
+#dynamic_padding       = true
+decorations           = "None"
+opacity               = 0.8
+blur                  = true
+#startup_mode          = "Windowed"
+#title                 = "Alacritty"
+#dynamic_title         = true
+#class                 = { instance = "Alacritty", general = "Alacritty" }
+#decorations_theme_variant = "None"
+#resize_increments     = false
+#option_as_alt         = "None"
+
+
+[scrolling]
+history               = 65535
+#multiplier            = 3
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+size                  = 16
+offset                = { x = 0, y = 0 }
+glyph_offset          = { x = 0, y = 0 }
+
+[mouse]
+hide_when_typing      = true
+bindings = [
+  { mouse = "Middle", action = "PasteSelection" },
+]
+
+[keyboard]
+bindings = [
+  { key = "V",        mods = "Control|Shift", action = "Paste" },
+  { key = "C",        mods = "Control|Shift", action = "Copy" },
+  { key = "Paste",                            action = "Paste" },
+  { key = "Copy",                             action = "Copy" },
+  { key = "Insert",   mods = "Shift",         action = "PasteSelection" },
+  { key = "F",        mods = "Control|Shift", action = "SearchForward",     mode = "~Search" },
+  { key = "B",        mods = "Control|Shift", action = "SearchBackward",    mode = "~Search" },
+  { key = "Key0",     mods = "Control",       action = "ResetFontSize" },
+  { key = "Equals",   mods = "Control",       action = "IncreaseFontSize" },
+  { key = "Minus",    mods = "Control",       action = "DecreaseFontSize" },
+  { key = "L",        mods = "Control",       action = "ClearLogNotice" },
+  { key = "L",        mods = "Control",       chars  = "\f" },
+  { key = "PageUp",   mods = "Shift",         action = "ScrollPageUp",      mode = "~Alt" },
+  { key = "PageDown", mods = "Shift",         action = "ScrollPageDown",    mode = "~Alt" },
+  { key = "Up",       mods = "Shift",         action = "ScrollLineUp",      mode = "~Alt" },
+  { key = "Down",     mods = "Shift",         action = "ScrollLineDown",    mode = "~Alt" },
+  { key = "Home",     mods = "Shift",         action = "ScrollToTop",       mode = "~Alt" },
+  { key = "End",      mods = "Shift",         action = "ScrollToBottom",    mode = "~Alt" },
+]
+
+
+[debug]
+#render_timer          = false
+#persistent_logging    = false
+#log_level             = "Warn"
+#renderer              = "None"
+#print_events          = false
+#highlight_damage      = false
+#prefer_egl            = false
